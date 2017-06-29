@@ -16,4 +16,14 @@ describe Game, type: :model do
   it 'references player two properly' do
     expect(subject.player_two).to eq(player_two)
   end
+
+  it 'is invalid without a player one' do
+    subject.player_one = nil
+    expect(subject).not_to be_valid
+  end
+
+  it 'is invalid without a player two' do
+    subject.player_two = nil
+    expect(subject).not_to be_valid
+  end
 end
