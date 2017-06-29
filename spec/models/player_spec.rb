@@ -7,6 +7,11 @@ describe Player, type: :model do
     expect(subject).to be_valid
   end
 
+  it 'is invalid without a username' do
+    subject.username = nil
+    expect(subject).not_to be_valid
+  end
+
   describe '#games' do
     let(:other_player) { create(:player) }
     let!(:game) { create(:game, player_one: subject, player_two: other_player) }
