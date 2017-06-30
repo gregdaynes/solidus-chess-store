@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Wrap the header and container to get a sticky footer -->
+    <div class='wrapper'>
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/container' %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
