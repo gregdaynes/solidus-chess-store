@@ -1,0 +1,9 @@
+<div class='create-game'>
+  <h3>Begin a New Game</h3>
+  <%= form_for :game, url: games_path, class:'the-form' do |f| %>
+    <%= f.text_field(:white_player, placeholder: 'White player name', class: 'text-player', required: true) %>
+    <%= f.text_field(:black_player, placeholder: 'Black player name', class: 'text-player', required: true) %>
+    <%= f.submit('Start Game', class: 'button-create-game-submit') %>
+  <% end %>
+</div>
+
