@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Webpack
+gem 'webpacker', '~> 2.0'
+
+# CSS Helpers
+gem 'autoprefixer-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -43,7 +49,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'simplecov'
-end
+
+  end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -52,6 +59,16 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Live Reloading
+  gem 'guard', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
+
+  # ProcManager
+  gem 'foreman'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
