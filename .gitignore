@@ -26,3 +26,5 @@
 /log
 /tmp
 /vendor
+/public/packs
+/node_modules
